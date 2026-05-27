@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio d'Alexandre Charosky, étudiant en informatique à Epitech." />
+    <title>Alexandre Charosky — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=Outfit:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ── NAV ── -->
+    <nav>
+        <div class="nav-logo">AC</div>
+        <ul class="nav-links">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#learned">Progression</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#xp">Expériences</a></li>
+            <li><a href="#formation">Formation</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Menu" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <ul class="nav-mobile" id="mobileMenu">
+        <li><a href="#about" onclick="closeMenu()">À propos</a></li>
+        <li><a href="#learned" onclick="closeMenu()">Progression</a></li>
+        <li><a href="#projects" onclick="closeMenu()">Projets</a></li>
+        <li><a href="#xp" onclick="closeMenu()">Expériences</a></li>
+        <li><a href="#formation" onclick="closeMenu()">Formation</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+
+    <!-- ── HERO ── -->
+    <div class="hero">
+        <div class="hero-inner">
+            <div>
+                <span class="hero-tag">Epitech — B1 · 2025/2026</span>
+                <h1>Alexandre<br />Charosky</h1>
+                <p class="hero-sub">
+                    Étudiant en informatique, motivé et adaptable. J'apprends à construire des projets concrets, à
+                    travailler en équipe et à progresser chaque jour.
+                </p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                    <a href="CV_Alexandre_Charosky.pdf" class="btn btn-outline" download>Télécharger mon CV</a>
+                </div>
+            </div>
+            <div class="hero-photo">
+                <img src="Alexandre_CHAROSKY.JPG" alt="Alexandre Charosky" />
+            </div>
+        </div>
+    </div>
+
+    <!-- ── À PROPOS ── -->
+    <div class="section fade" id="about">
+        <p class="section-label">01 — À propos</p>
+        <h2>En quelques mots</h2>
+        <p class="about-text">
+            Je suis un étudiant motivé, fiable et dévoué, doté d'une grande capacité d'adaptation à de nouveaux
+            environnements et défis. J'aime apprendre et améliorer continuellement mes compétences. Grâce à mes bonnes
+            aptitudes relationnelles, je communique facilement avec les autres et établis rapidement des relations de
+            travail positives. Je suis à l'aise pour travailler en équipe tout comme de manière indépendante, et je
+            prends mes responsabilités au sérieux.
+        </p>
+        <div class="tags">
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Python</span>
+            <span class="tag">Shell / Linux</span>
+            <span class="tag">Git</span>
+            <span class="tag">Anglais B2/C1</span>
+        </div>
+    </div>
+
+    <!-- ── CE QUE J'AI APPRIS ── -->
+    <div class="section fade" id="learned">
+        <p class="section-label">02 — Progression</p>
+        <h2>Ce que cette année m'a apporté</h2>
+        <div class="learned-grid">
+
+            <div class="learned-card">
+                <h3>Développement web</h3>
+                <p>HTML, CSS et TypeScript pour construire des pages structurées, lisibles et responsive.</p>
+            </div>
+
+            <div class="learned-card">
+                <h3>Linux & Shell</h3>
+                <p>Navigation en ligne de commande, scripts shell, compréhension du système de fichiers Unix.</p>
+            </div>
+
+            <div class="learned-card">
+                <h3>Travail en équipe</h3>
+                <p>Utilisation de Git pour collaborer, gérer des branches et organiser le travail à plusieurs.</p>
+            </div>
+
+            <div class="learned-card">
+                <h3>Cybersécurité</h3>
+                <p>Découverte des procédures et protocoles de sécurité informatique ainsi qu'apprendre à reconnaître les
+                    vulnérabilités.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ── PROJETS ── -->
+    <div class="section fade" id="projects">
+        <p class="section-label">03 — Projets</p>
+        <h2>Mes réalisations sur GitHub</h2>
+        <div class="projects-grid" id="projects-grid">
+            <p class="projects-loading">Chargement des projets...</p>
+        </div>
+    </div>
+
+    <!-- ── EXPÉRIENCES ── -->
+    <div class="section fade" id="xp">
+        <p class="section-label">04 — Expériences</p>
+        <h2>Mes expériences professionnelles</h2>
+        <div class="xp-list">
+
+            <div class="xp-item">
+                <div class="xp-bar"></div>
+                <div class="xp-content">
+                    <p class="xp-meta">Juillet 2023 · Edinburgh, Écosse</p>
+                    <h3>Quorum Cyber — Stage</h3>
+                    <p>Exploration des procédures internes de cybersécurité et participation à des tâches de gestion des
+                        données et de sécurité informatique, sous la supervision de professionnels expérimentés.</p>
+                </div>
+            </div>
+
+            <div class="xp-item">
+                <div class="xp-bar"></div>
+                <div class="xp-content">
+                    <p class="xp-meta">Août – Septembre 2025 · Labège, Toulouse</p>
+                    <h3>Burger King — Employé polyvalent</h3>
+                    <p>Travail en équipe, gestion efficace des commandes et des situations stressantes dans un
+                        environnement rapide.</p>
+                </div>
+            </div>
+
+            <div class="xp-item">
+                <div class="xp-bar"></div>
+                <div class="xp-content">
+                    <p class="xp-meta">Décembre 2025 – Janvier 2026 · Toulouse</p>
+                    <h3>Crémerie Canac Dommange</h3>
+                    <p>Vente et conseil en fromagerie, accueil et analyse des besoins clients, sens du service et de la
+                        mise en valeur des produits.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ── FORMATION ── -->
+    <div class="section fade" id="formation">
+        <p class="section-label">05 — Formation</p>
+        <h2>Mon parcours scolaire</h2>
+        <div class="xp-list">
+
+            <div class="xp-item">
+                <div class="xp-bar xp-bar--edu"></div>
+                <div class="xp-content">
+                    <p class="xp-meta">2021 – 2022 · Toulouse</p>
+                    <h3>Brevet des Collèges — Caousou</h3>
+                    <p>Diplôme du brevet obtenu au collège Caousou à Toulouse.</p>
+                </div>
+            </div>
+
+            <div class="xp-item">
+                <div class="xp-bar xp-bar--edu"></div>
+                <div class="xp-content">
+                    <p class="xp-meta">2024 · Toulouse</p>
+                    <h3>Cambridge English — Niveau B2/C1</h3>
+                    <p>Examen d'anglais Cambridge passé en candidat libre, attestant d'un niveau avancé à l'écrit et à
+                        l'oral.</p>
+                </div>
+            </div>
+
+            <div class="xp-item">
+                <div class="xp-bar xp-bar--edu"></div>
+                <div class="xp-content">
+                    <p class="xp-meta">2024 – 2025 · Toulouse</p>
+                    <h3>Baccalauréat — Lycée Polyvalent Bellevue</h3>
+                    <p>Obtention du baccalauréat au Lycée Polyvalent Bellevue à Toulouse.</p>
+                </div>
+            </div>
+
+            <div class="xp-item">
+                <div class="xp-bar xp-bar--edu"></div>
+                <div class="xp-content">
+                    <p class="xp-meta">Septembre 2025 – aujourd'hui · Toulouse</p>
+                    <h3>Epitech — Étudiant B1</h3>
+                    <p>Formation par projets en informatique : développement web, scripting shell, travail en équipe
+                        avec Git, et découverte de TypeScript.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ── CONTACT ── -->
+    <div class="section fade" id="contact">
+        <p class="section-label">06 — Contact</p>
+        <h2>Prenons contact</h2>
+        <div class="contact-grid">
+
+            <div class="contact-info">
+                <p>N'hésitez pas à me contacter pour toute question, proposition ou simplement pour échanger.</p>
+                <div class="contact-detail">
+                    <div class="dot"></div> alexandrecharosky@gmail.com
+                </div>
+                <div class="contact-detail">
+                    <div class="dot"></div> 06 33 28 06 82
+                </div>
+                <div class="contact-detail">
+                    <div class="dot"></div> Toulouse, France
+                </div>
+                <div class="contact-detail">
+                    <div class="dot"></div>
+                    <a href="https://github.com/alexandrecharosky-eng"
+                        target="_blank">github.com/alexandrecharosky-eng</a>
+                </div>
+                <div class="contact-detail">
+                    <div class="dot"></div>
+                    <a href="https://www.linkedin.com/in/alexandre-charosky" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+
+            <div>
+                <form id="contactForm" onsubmit="submitForm(event)">
+                    <div class="form-row">
+                        <input type="text" placeholder="Prénom" required />
+                        <input type="text" placeholder="Nom" required />
+                    </div>
+                    <input type="email" placeholder="Email" required />
+                    <textarea placeholder="Votre message..." required></textarea>
+                    <button type="submit" class="btn btn-primary">Envoyer →</button>
+                </form>
+                <div class="form-success" id="formSuccess">Message envoyé, merci !</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+        <span>© 2026 Alexandre Charosky · <span class="footer-deploy">Déployé avec <a href="https://pages.github.com" target="_blank">GitHub Pages</a></span></span>
+        <div class="footer-links">
+            <a href="https://github.com/alexandrecharosky-eng" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/alexandre-charosky" target="_blank">LinkedIn</a>
+            <a href="CV_Alexandre_Charosky.pdf" download>CV (PDF)</a>
+        </div>
+    </footer>
+
+    <script>
+        // ── Menu mobile ──
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const toggle = document.querySelector('.nav-toggle');
+            menu.classList.toggle('open');
+            toggle.classList.toggle('open');
+        }
+        function closeMenu() {
+            document.getElementById('mobileMenu').classList.remove('open');
+            document.querySelector('.nav-toggle').classList.remove('open');
+        }
+
+        // ── Lien actif au scroll ──
+        const sections = document.querySelectorAll('[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => {
+                if (window.scrollY >= s.offsetTop - 80) current = s.id;
+            });
+            navLinks.forEach(a => {
+                a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+            });
+        });
+
+        // ── Fade in au scroll ──
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+
+        // ── Formulaire ──
+        function submitForm(e) {
+            e.preventDefault();
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+        }
+
+        // ── Projets hardcodés ──
+        const projects = [
+            {
+                name: 'NextBuy',
+                description: 'Analyse de données e-commerce : nettoyage de dataset, visualisations et modèles de machine learning pour prédire les comportements d\'achat.',
+                language: 'Python / Jupyter',
+                url: 'https://github.com/EpitechBachelorPromo2028/B-DAT-201-TLS-2-1-nextbuy-2'
+            },
+            {
+                name: 'ELIZA',
+                description: 'Implémentation d\'un chatbot conversationnel inspiré du programme ELIZA des années 60, avec reconnaissance de patterns et génération de réponses.',
+                language: 'Python',
+                url: 'https://github.com/EpitechBachelorPromo2028/B-AIA-210-TLS-2-1-eliza-5'
+            },
+            {
+                name: 'Alice in Wonderland',
+                description: 'Projet NLP : traitement du texte d\'Alice au Pays des Merveilles avec NLTK — analyse de fréquences, similarités et exploration linguistique.',
+                language: 'Python',
+                url: 'https://github.com/EpitechBachelorPromo2028/B-AIA-200-TLS-2-1-aliceinwonderland-4'
+            },
+            {
+                name: 'TARDIS',
+                description: 'Analyse et visualisation de données temporelles : exploration de datasets, nettoyage et représentations graphiques avec Jupyter Notebook.',
+                language: 'Jupyter Notebook',
+                url: 'https://github.com/EpitechBachelorPromo2028/B-DAT-200-TLS-2-1-tardis-1'
+            },
+            {
+                name: 'Portfolio',
+                description: 'Ce site — réalisé en HTML, CSS et TypeScript dans le cadre du module portfolio à Epitech. Responsive et mis à jour au fil de l\'année.',
+                language: 'HTML / CSS / TypeScript',
+                url: 'https://github.com/alexandrecharosky-eng'
+            }
+        ];
+
+        const grid = document.getElementById('projects-grid');
+        grid.innerHTML = projects.map(p => `
+      <div class="project-card" onclick="window.open('${p.url}', '_blank')">
+        <div>
+          <h3>${p.name}</h3>
+          <p>${p.description}</p>
+        </div>
+        <div class="project-meta">
+          <span class="project-lang">${p.language}</span>
+          <a class="project-link" href="${p.url}" target="_blank" onclick="event.stopPropagation()">Voir le repo →</a>
+        </div>  
+      </div>
+    `).join('');
+    </script>
+
+</body>
+
+</html>
